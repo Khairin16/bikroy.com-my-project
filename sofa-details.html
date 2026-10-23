@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooden Sofa Set</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding-bottom: 50px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin:20px 0;
+    text-decoration:none;
+    color:#00a650;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.details{
+    display:flex;
+    gap:40px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.details img{
+    width:500px;
+    height: auto;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.info{
+    flex:1;
+}
+
+.info h1{
+    margin-bottom:20px;
+}
+
+.price{
+    color:#00a650;
+    font-size:35px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.info p{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+/* --- Seller Contact Card Styling --- */
+.seller-contact-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.seller-contact-card h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.seller-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.seller-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.seller-details h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #222;
+}
+
+.seller-details .member-since {
+    margin: 3px 0 0 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-call {
+    background-color: #00a650;
+    color: #ffffff;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-call:hover {
+    background-color: #00863f;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00a650;
+}
+
+.btn-submit {
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #111111;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back-btn">← Back to Home</a>
+
+<div class="details">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Wooden Sofa Set">
+
+<div class="info">
+
+<h1>Wooden Sofa Set</h1>
+
+<p class="price">৳ 30,000</p>
+
+<p><strong>Category:</strong> Home & Living</p>
+
+<p><strong>Material:</strong> Solid Shegun Wood</p>
+
+<p><strong>Color:</strong> Walnut Brown</p>
+
+<p><strong>Seating Capacity:</strong> 5 Persons</p>
+
+<p><strong>Condition:</strong> Used - Excellent</p>
+
+<p><strong>Location:</strong> Rajshahi, Bangladesh</p>
+
+<p><strong>Description:</strong></p>
+
+<p>
+Premium quality Wooden Sofa Set made from solid Shegun wood.<br>
+Includes 3-seater, 2 single chairs and a center table.<br>
+Strong, durable, and comfortable with high-quality cushions.<br>
+No cracks or damage.<br>
+Suitable for living rooms and family lounges.<br>
+Ready for immediate delivery.
+</p>
+
+<!-- Seller Information Section -->
+<div class="seller-contact-card">
+    <h3>Seller Information</h3>
+    
+    <div class="seller-profile">
+        <div class="seller-avatar">👤</div>
+        <div class="seller-details">
+            <h4>Tanjina Akter</h4>
+            <p class="member-since">Member since Nov 2025</p>
+        </div>
+    </div>
+
+    <!-- Call Button -->
+    <a href="tel:+8801700000000" class="btn btn-call">
+        📞 Call Seller: 017XX-XXXXXX
+    </a>
+
+    <!-- Send Message Form -->
+    <form class="contact-form">
+        <textarea placeholder="Write your message to the seller..." rows="3" required></textarea>
+        <button type="submit" class="btn btn-submit">Send Message</button>
+    </form>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

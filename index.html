@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bikroy Style Marketplace</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+<header class="topbar">
+  <div class="container nav">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="smile"></span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="signin.html" class="signin-btn">Sign in</a>
+      <span class="divider">|</span>
+      <a href="registration.html" class="reg-btn">Registration</a>
+      <a href="sell.html" class="sell-btn">SELL</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1>What are you looking for?</h1>
+
+    <div class="bikroy-search-box">
+      <select>
+        <option>All Bangladesh</option>
+        <option>Dhaka</option>
+        <option>Chattogram</option>
+        <option>Sylhet</option>
+        <option>Khulna</option>
+        <option>Rajshahi</option>
+        <option>Rangpur</option>
+        <option>Maymansing</option>
+        <option>Barishal</option>
+      </select>
+
+      <div class="search-input-wrap">
+       <input
+  type="text"
+  id="searchInput"
+  placeholder="I am looking for..."
+/>
+
+<button
+  class="search-icon-btn"
+  id="searchBtn"
+>
+  🔍
+</button>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Categories -->
+    <section class="categories-section container">
+      <h2>Browse by Category</h2>
+
+      <div class="categories-grid">
+        <div class="category-card" onclick="filterCategory('Mobiles')">
+          <div class="icon">📱</div>
+          <h3>Mobiles</h3>
+          <p>65,000+ ads</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Electronics')">
+          <div class="icon">💻</div>
+          <h3>Electronics</h3>
+          <p>48,000+ ads</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Vehicles')">
+          <div class="icon">🚗</div>
+          <h3>Vehicles</h3>
+          <p>29,000+ ads</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Property')">
+          <div class="icon">🏠</div>
+          <h3>Property</h3>
+          <p>15,000+ ads</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Home')">
+          <div class="icon">🛋️</div>
+          <h3>Home & Living</h3>
+          <p>13,000+ ads</p>
+        </div>
+
+        <div class="category-card">
+          <div class="icon">💼</div>
+          <h3>Jobs</h3>
+          <p>1,400+ ads</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Pets')">
+          <div class="icon">🐶</div>
+          <h3>Pets & Animals</h3>
+          <p>11,000+ ads</p>
+        </div>
+
+        <div class="category-card">
+          <div class="icon">🎓</div>
+          <h3>Education</h3>
+          <p>2,000+ ads</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Ads -->
+    <section class="featured container">
+      <div class="section-header">
+        <h2>Featured Ads</h2>
+        <a href="#">View More</a>
+      </div>
+      <div class="ads-grid">
+        <a href="iphone-details.html" class="ad-link" data-category="Mobiles">
+         <div class="ad-card">
+
+    <img
+    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+    alt="Phone">
+
+    <div class="ad-info">
+        <h3>iPhone 13 Pro Max</h3>
+        <p class="price">৳ 85,000</p>
+        <p class="location">Dhaka, Bangladesh</p>
+    </div>
+
+</div>
+</a>
+       <a href="toyota-details.html" class="ad-link" data-category="Vehicles">
+<div class="ad-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+    alt="Car"
+  />
+
+  <div class="ad-info">
+    <h3>Toyota Axio 2018</h3>
+    <p class="price">৳ 18,50,000</p>
+    <p class="location">Chattogram, Bangladesh</p>
+  </div>
+
+</div>
+
+</a>
+        <a href="apartment-details.html" class="ad-link" data-category="Property">
+        <div class="ad-card">
+          <img
+            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80"
+            alt="Apartment"
+          />
+          <div class="ad-info">
+            <h3>3 Bedroom Apartment for Rent</h3>
+            <p class="price">৳ 25,000 / month</p>
+            <p class="location">Dhaka, Bangladesh</p>
+          </div>
+        </div>
+</a>
+       <a href="laptop-details.html" class="ad-link" data-category="Electronics">
+        <div class="ad-card">
+          <img
+            src="hp laptop.jpg"
+            alt="Laptop"
+          />
+          <div class="ad-info">
+            <h3>HP Pavilion Laptop</h3>
+            <p class="price">৳ 52,000</p>
+            <p class="location">Khulna, Bangladesh</p>
+          </div>
+        </div>
+</a>
+    <a href="cat-details.html" class="ad-link" data-category="Pets">
+        <div class="ad-card">
+          <img
+            src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80"
+            alt="Pet"
+          />
+          <div class="ad-info">
+            <h3>Persian Cat</h3>
+            <p class="price">৳ 12,000</p>
+            <p class="location">Sylhet, Bangladesh</p>
+          </div>
+        </div>
+    </a>
+      <a href="sofa-details.html" class="ad-link" data-category="Home">
+        <div class="ad-card">
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
+            alt="Furniture"
+          />
+          <div class="ad-info">
+            <h3>Wooden Sofa Set</h3>
+            <p class="price">৳ 30,000</p>
+            <p class="location">Rajshahi, Bangladesh</p>
+          </div>
+        </div>
+      </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <h2>Start making money!</h2>
+          <p>Do you have something to sell? Post your first ad today.</p>
+        </div>
+        <a href="#" class="cta-btn">Post Your Ad</a>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links container">
+      <h2>Quick Links</h2>
+
+      <div class="quick-grid">
+        <div class="quick-card">
+          <h3>Electronics</h3>
+          <ul>
+            <li>Mobile Phones</li>
+            <li>Laptops</li>
+            <li>TVs</li>
+            <li>Cameras</li>
+          </ul>
+        </div>
+
+        <div class="quick-card">
+          <h3>Vehicles</h3>
+          <ul>
+            <li>Cars</li>
+            <li>Motorbikes</li>
+            <li>Bicycles</li>
+            <li>Auto Parts</li>
+          </ul>
+        </div>
+
+        <div class="quick-card">
+          <h3>Property</h3>
+          <ul>
+            <li>Apartment for Sale</li>
+            <li>Apartment for Rent</li>
+            <li>Land</li>
+            <li>Commercial Property</li>
+          </ul>
+        </div>
+
+        <div class="quick-card">
+          <h3>Jobs</h3>
+          <ul>
+            <li>Marketing Jobs</li>
+            <li>Customer Service</li>
+            <li>Delivery Rider</li>
+            <li>Sales Executive</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>bikroy.clone</h3>
+          <p>
+            A simple Bikroy-inspired marketplace UI made with HTML and CSS.
+          </p>
+        </div>
+
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">How to Sell</a></li>
+            <li><a href="#">How to Buy</a></li>
+            <li><a href="#">Safety Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li> 
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2026 bikroy.clone | Designed for practice</p>
+      </div>
+    </footer>
+    <script>
+  const searchInput = document.getElementById("searchInput");
+  const searchBtn = document.getElementById("searchBtn");
+
+  function searchProducts() {
+    const searchText = searchInput.value.toLowerCase().trim();
+    const ads = document.querySelectorAll(".ad-link");
+
+    ads.forEach(function (ad) {
+      const productName = ad.querySelector("h3").innerText.toLowerCase();
+
+      if (searchText === "" || productName.includes(searchText)) {
+        ad.style.display = "";
+      } else {
+        ad.style.display = "none";
+      }
+    });
+  }
+
+  searchBtn.addEventListener("click", searchProducts);
+
+  searchInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      searchProducts();
+    }
+  });
+
+
+   function filterCategory(category) {
+    const ads = document.querySelectorAll(".ad-link");
+
+    ads.forEach(function (ad) {
+      if (ad.dataset.category === category) {
+        ad.style.display = "";
+      } else {
+        ad.style.display = "none";
+      }
+    });
+  }
+</script>
+  </body>
+</html>

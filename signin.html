@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration & Sign In Popup</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#f5f5f5;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup {
+        background: white;
+        width: 90%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+    }
+
+    .popup h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Social Buttons Styling & Colors */
+    .social {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .social button {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+    }
+
+    /* Google Button Styles */
+    .social .google {
+        color: #de5246;
+        border-color: #f5c2be;
+    }
+
+    .social .google:hover {
+        background-color: #de5246;
+        color: white;
+        border-color: #de5246;
+    }
+
+    /* Facebook Button Styles */
+    .social .facebook {
+        color: #1877f2;
+        border-color: #b8d5fb;
+    }
+
+    .social .facebook:hover {
+        background-color: #1877f2;
+        color: white;
+        border-color: #1877f2;
+    }
+
+    /* Active Effect on Click */
+    .social button:active {
+        transform: scale(0.97);
+    }
+
+    /* Input Forms Styling */
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .input-group input:focus {
+        border-color: #00a650;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #00a650;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+        background: #00863f;
+    }
+
+    .submit-btn:active {
+        transform: scale(0.98);
+    }
+
+    .signin, .terms {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    .signin a, .terms a {
+        color: #00a650;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .signin a:hover, .terms a:hover {
+        text-decoration: underline;
+    }
+
+    /* Toggle Forms */
+    .form-box {
+        display: none;
+    }
+
+    .form-box.active {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+
+    <div class="popup">
+
+        <span class="close">&times;</span>
+
+        <!-- ================= 1. REGISTER POPUP ================= -->
+        <div id="register-box" class="form-box active">
+            <h2>Register</h2>
+
+            <div class="social">
+                <button type="button" class="google">
+                    <i class="fa-brands fa-google"></i> Google
+                </button>
+                <button type="button" class="facebook">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </button>
+            </div>
+
+            <button type="button" class="submit-btn">
+                Register via e-mail or phone
+            </button>
+
+            <p class="signin">
+                Already have an account? 
+                <a href="#" id="go-to-login">Sign in</a>
+            </p>
+
+            <p class="terms">
+                By continuing you agree to the 
+                <a href="#">Policy</a> & 
+                <a href="#">Rules</a>
+            </p>
+        </div>
+
+        <!-- ================= 2. SIGN IN POPUP ================= -->
+        <div id="login-box" class="form-box">
+            <h2>Sign In</h2>
+
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" placeholder="Email or Phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+
+            <p class="signin">
+                Don't have an account? 
+                <a href="#" id="go-to-register">Register</a>
+            </p>
+
+            <p class="terms">
+                By continuing you agree to the 
+                <a href="#">Policy</a> & 
+                <a href="#">Rules</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript to Switch Between Register & Sign In -->
+<script>
+    const registerBox = document.getElementById('register-box');
+    const loginBox = document.getElementById('login-box');
+    const goToLogin = document.getElementById('go-to-login');
+    const goToRegister = document.getElementById('go-to-register');
+
+    // Click Sign In -> Show Login Form
+    goToLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        registerBox.classList.remove('active');
+        loginBox.classList.add('active');
+    });
+
+    // Click Register -> Show Register Options
+    goToRegister.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginBox.classList.remove('active');
+        registerBox.classList.add('active');
+    });
+</script>
+
+</body>
+</html>
